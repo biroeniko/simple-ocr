@@ -471,7 +471,6 @@ int main(int argc, char *argv[])
     }
 
     // KNN
-    // LINEAR KERNEL
     int factor = 1;
     KNN(n, training, testing, factor);
 
