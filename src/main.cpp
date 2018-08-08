@@ -1,27 +1,25 @@
-// Biro Eniko
-// beim1499
-// 521/1
+/* MIT License
 
-// OCR
-/*
-Az OCR tanulási halmazban kézzel írott számjegyek képei találhatók. Az tanulási és teszt adatokat egyenként 8 * 8 + 1 = 65 hosszúságú vektorok alakjában tároljuk, ahol az első 64 szám a 8x8-as bittérkép szürkeárnyalatának a kódja, az utolsó érték pedig az osztály kódja 0 és 9 között.
+Copyright (c) 2018 Biro Eniko
 
-Az adathalmaz a következő állományokból áll:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-optdigits.traView in a new window – tanulási adatok (3823 darab);
-optdigits.tesView in a new window – teszt adatok (1797 darab);
-optdigits.namesView in a new window – az adatok leírása.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Feladat:
-1. Írjunk egy távolságszámoló függvényt, amely két, egyenként 64 = 8x8 hosszú adatra megadja azok euklideszi távolságát. 2pt.
-2. Az adatok terében definiáljunk egy általánosított skaláris szorzatot – kernel függvényt: <x, y> = K(x, y) – majd definiáljuk a skaláris szorzat függvényeként a távolságot:
-||x -y||^2 = <x-y, x-y> = K(x, x) + K(y, y) - 2*K(x, y)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-Implementáljuk a lineáris, polinomiális és Gauss-féle kerneleket. 2pt.
-3. Implementáljuk a kNN (K-Nearest Neighbor – K legközelebbi szomszéd) algoritmust úgy, hogy az tetszőleges kernelt használhasson. 3pt.
-4. Implementáljuk a centroid módszert úgy, hogy az tetszőleges kernelt használhasson. 3pt.
-5. Számítsuk ki a tanulási és a teszt hibát minden osztályra. 2pt.
-6. 5-szörös kereszt-megerősítést (cross-validation) használva határozzuk meg a kernelek optimális paramétereit a kNN és centroid módszerekhez. (opcionális 5pt.)
 */
 
 #include <iostream>
